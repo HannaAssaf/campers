@@ -47,3 +47,40 @@ export const getVehicles = async (): Promise<Vehicle[]> => {
     return [];
   }
 };
+
+export const getVehiclesById = async (id: string): Promise<Vehicle> => {
+  const res = await axios.get<getVehiclePrors>(`/campers/${id}`);
+  const item = res.data;
+
+  return {
+    id: item.id,
+    name: item.name,
+    price: item.price,
+    rating: item.rating,
+    description: item.description,
+    location: { location: item.location },
+    details: {
+      form: item.form,
+      length: item.length,
+      width: item.width,
+      height: item.height,
+      tank: item.tank,
+      consumption: item.consumption,
+    },
+    equipment: {
+      transmission: item.transmission,
+      engine: item.engine,
+      AC: item.AC,
+      bathroom: item.bathroom,
+      kitchen: item.kitchen,
+      TV: item.TV,
+      radio: item.radio,
+      refrigerator: item.refrigerator,
+      microwave: item.microwave,
+      gas: item.gas,
+      water: item.water,
+    },
+    gallery: item.gallery,
+    reviews: item.reviews,
+  };
+};

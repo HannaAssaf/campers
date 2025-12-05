@@ -45,8 +45,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 16px; */
-  /* padding-right: 24px; */
   margin-bottom: 8px;
   position: relative;
 }
@@ -69,8 +67,6 @@
   position: absolute;
   right: 0;
   top: 0;
-  /* flex-shrink: 0; */
-  /* align-items: center; */
   gap: 16px;
 }
 .price {
@@ -93,13 +89,20 @@
   margin-bottom: 24px;
 }
 
-.button {
-  height: 56px;
-  padding: 16px 40px;
+.link {
   align-self: flex-start;
   margin-top: auto;
+  height: 56px;
+  padding: 16px 40px;
+  background-color: var(--btn-primary-bg);
+  color: var(--color-white);
+  font-size: var(--button-m-size);
+  font-weight: var(--button-m-weight);
+  line-height: var(--button-m-line);
+  border-radius: 200px;
+  transition: background-color 0.3s;
 }
 
-.button:hover {
+.link:hover {
   background-color: var(--btn-primary-bg-hover);
 }

@@ -18,7 +18,7 @@
   fill: var(--color-button);
 }
 .btn:hover svg {
-  stroke: var(--color-button);
+  stroke: var(--color-button-hover);
   fill: none;
 }
 .liked .icon {

@@ -4,6 +4,7 @@ import { Vehicle } from '@/types/vehicle';
 import VehicleMeta from '../VehicleMeta/VehicleMeta';
 import VehicleEquipment from '../VehicleEquipment/VehicleEquipment';
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
+import Link from 'next/link';
 
 export default function VehicleItem({ vehicle }: { vehicle: Vehicle }) {
   return (
@@ -30,11 +31,13 @@ export default function VehicleItem({ vehicle }: { vehicle: Vehicle }) {
           <VehicleMeta
             rating={vehicle.rating}
             reviewsCount={vehicle.reviews.length}
-            location={vehicle.location.location}
+            location={vehicle.location}
           />
           <p className={css.description}>{vehicle.description}</p>
           <VehicleEquipment equipment={vehicle.equipment} variant="catalog" />
-          <button className={css.button}>Show more</button>
+          <Link href={`/campers/${vehicle.id}`} className={css.link}>
+            Show more
+          </Link>
         </div>
       </div>
     </div>

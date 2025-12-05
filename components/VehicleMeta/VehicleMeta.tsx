@@ -1,9 +1,10 @@
+import { VehicleLocation } from '@/types/vehicle';
 import css from './VehicleMeta.module.css';
 
 interface Props {
   rating: number;
   reviewsCount: number;
-  location: string;
+  location: VehicleLocation;
 }
 
 export default function VehicleMeta({ rating, reviewsCount, location }: Props) {
@@ -23,7 +24,7 @@ export default function VehicleMeta({ rating, reviewsCount, location }: Props) {
         <svg className={css.icon}>
           <use href="/icons.svg#map" />
         </svg>
-        {location}
+        {location.location}
       </span>
     </div>
   );
