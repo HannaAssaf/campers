@@ -35,7 +35,7 @@
 
   --h2-size: 24px;
   --h2-line: 32px;
-  --h2-weight: 600px;
+  --h2-weight: 600;
 
   --h3-size: 20px;
   --h3-line: 24px;
@@ -93,6 +93,15 @@ li {
 
 button {
   cursor: pointer;
+  border: none;
+  display: inline-block;
+  background-color: var(--btn-primary-bg);
+  color: var(--color-white);
+  font-size: var(--button-m-size);
+  font-weight: var(--button-m-weight);
+  line-height: var(--button-m-line);
+  border-radius: 200px;
+  transition: background-color 0.3s;
 }
 
 section {
